@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Objektstammtisch Kiel</title>
+  <meta charset="utf-8">
+  <style type="text/css" media="screen">
+    @font-face {
+      font-family: "League Gothic";
+      font-weight: normal;
+      src: url(public/League_Gothic.otf);
+    }
+    body {
+      font-family: "League Gothic", sans-serif;
+      font-size: 36px;
+      background: #FFFFFF;
+      color: #888888;
+    }
+    #main {
+      position: relative;
+      width: 960px;
+      height: 640px;
+      margin: 20px auto;
+    }
+    h1 {
+      margin: 100px 0;
+      text-align: center;
+      font-weight: normal;
+      font-size: 130px;
+    }
+    h1 img {
+      margin-right: -30px;
+      vertical-align: bottom;
+    }
+    h1 .ob {
+      color: #038040;
+    }
+    h1 small {
+      margin-left: -20px;
+      font-size: 48px;
+    }
+    #info {
+      margin: 0 auto;
+      padding: 40px;
+      width: 480px;
+      border-radius: 20px;
+      -moz-border-radius: 20px;
+      border: 4px solid #CDCDCD;
+      text-align: center;
+    }
+    #info h2 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #CDCDCD;
+      margin: 0;
+      position: relative;
+      line-height: 0;
+      top: -54px;
+    }
+    #info a {
+      font-size: 48px;
+      color: #038040;
+      text-decoration: none;
+      border-bottom 4px solid;
+    }
+    #info a:hover {
+      border-bottom: 4px solid #038040;
+    }
+    #description {
+      position: absolute;
+      right: 40px;
+      bottom: 40px;
+      text-align: right;
+    }
+    #description a {
+      color: inherit;
+      text-decoration: none;
+    }
+    #description strong {
+      font-weight: normal;
+      font-size: 48px;
+      color: #333333;
+    }
+    #links {
+      position: absolute;
+      left: 40px;
+      bottom: 40px;
+      text-align: left;
+    }
+    #links a {
+      color: #CDCDCD;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    #links a:hover {
+      color: #666666;
+      border-bottom: 4px solid #666666;
+    }
+    #draft {
+      position: absolute;
+      top: 30px;
+      left: -50px;
+      background: #888888;
+      color: #CDCDCD;
+      padding: 0 70px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+    }
+    
+  </style>
+</head>
+<body>
+<div id="draft">Draft</div>
+<div id="main">
+  <!-- Not tested on any version of IE. Please use a different browser. -->
+  
+  <h1>
+    <img src="public/obst-logo.png">
+    <span class="ob">OB</span><span class="st">ST</span>
+    <small>Kiel</small>
+  </h1>
+  
+  <div id="info">
+    <h2>Nächstes Treffen</h2>
+    <a class="date" href="#">14.09.2010</a>,
+    <a class="date" href="#">19:00</a> in der 
+    <a class="location" href="http://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Eckernf%C3%B6rder+Stra%C3%9Fe+20&amp;sll=54.322684,10.13586&amp;sspn=0.320773,0.4216&amp;ie=UTF8&amp;hq=&amp;hnear=Eckernf%C3%B6rder+Stra%C3%9Fe+20,+Kiel+24103+Kiel,+Schleswig-Holstein&amp;z=16">Toppoint</a>
+    in Kiel
+  </div>
+  
+  <div id="description">
+    <a href="#">
+      <strong>Vorträge</strong>,
+      <strong>Workshops</strong> und
+      <strong>Klönschnack</strong> rund<br>
+      um Programmiersprachen, Informatik und die Computerei
+    </a>
+  </div>
+  
+  <div id="links">
+    <a href="http://twitter.com/obstkiel">twitter</a>
+    <a href="#">blog</a>
+    <a href="#">contact</a>
+  </div>
+</div>
+</body>
+</html>
