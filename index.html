@@ -7,10 +7,11 @@
     @font-face {
       font-family: "League Gothic";
       font-weight: normal;
-      src: url(public/League_Gothic.otf);
+      src: url(public/League_Gothic.eot);
+      src: url(public/League_Gothic.otf) format('opentype');
     }
     body {
-      font-family: "League Gothic", sans-serif;
+      font-family: "League Gothic", "Arial Narrow", sans-serif;
       font-size: 36px;
       background: #FFFFFF;
       color: #888888;
@@ -24,6 +25,7 @@
     h1 {
       margin: 100px 0;
       text-align: center;
+      text-shadow: #000 1px 1px 2px;
       font-weight: normal;
       font-size: 130px;
     }
@@ -61,6 +63,7 @@
       color: #038040;
       text-decoration: none;
       border-bottom 4px solid;
+      -webkit-transition: color .2s linear;
     }
     #info a:hover {
       border-bottom: 4px solid #038040;
@@ -90,6 +93,7 @@
       color: #CDCDCD;
       text-decoration: none;
       margin-right: 20px;
+      -webkit-transition: color .2s linear;
     }
     #links a:hover {
       color: #666666;
@@ -105,7 +109,29 @@
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
     }
-    
+    #popup {
+      background: #FFFFFF;
+      position: absolute;
+      top: 160px;
+      left: 160px;
+      width: 560px;
+      height: 250px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      border: 4px solid #CDCDCD;
+      border-radius: 20px;
+      -moz-border-radius: 20px;
+      box-shadow: 0 4px 12px #666;
+      -webkit-box-shadow: 0 4px 12px #666;
+      -moz-box-shadow: 0 4px 12px #666;
+      display: none;
+    }
+    #popup p {
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 20px 0;
+    }
   </style>
 </head>
 <body>
@@ -121,8 +147,7 @@
   
   <div id="info">
     <h2>Nächstes Treffen</h2>
-    <a class="date" href="#">14.09.2010</a>,
-    <a class="date" href="#">19:00</a> in der 
+    <a class="date" href="http://www.google.com/calendar/embed?src=h07u7332aamtva98jhe3e5tt4k%40group.calendar.google.com&amp;ctz=Europe/Berlin">14.09.2010, 19:00</a> in der 
     <a class="location" href="http://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Eckernf%C3%B6rder+Stra%C3%9Fe+20&amp;sll=54.322684,10.13586&amp;sspn=0.320773,0.4216&amp;ie=UTF8&amp;hq=&amp;hnear=Eckernf%C3%B6rder+Stra%C3%9Fe+20,+Kiel+24103+Kiel,+Schleswig-Holstein&amp;z=16">Toppoint</a>
     in Kiel
   </div>
@@ -141,6 +166,30 @@
     <a href="#">blog</a>
     <a href="#">contact</a>
   </div>
+
+  <div id="popup">
+    <p>Der Kieler Objekt-Stammtisch (kurz OBST, ehemals "Stammtisch
+    objektorientierte Methoden") trifft sich seit 1999 regelmäßig am
+    zweiten Dienstag im Monat zum Klönschnack und Informationsaustausch.</p>
+
+    <p>In erster Linie werden interessante Themen rund um verschiedene
+    Paradigmen der Programmierung in Vorträgen vermittelt und anschließend
+    sachverständig diskutiert. Die Vortragsinhalte haben sich seit
+    Gründung stetig intensiviert und werden nun durch Einsteigerthemen
+    ergänzt. Neben der Software-Entwicklung und Technik im Allgemeinen
+    reden wir auch gerne über kulturelle Aspekte des Technikeinsatzes.</p>
+  </div>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+  $('h1, #description').click(function(){
+    $('#popup').show().click(function(){
+      $(this).hide();
+    })
+  });
+  $('#links a:last').attr("href", "mailto:info@o#bs#t-k#ie#l#.d#e".replace(/#/g, ""));
+});
+</script>
 </body>
 </html>
