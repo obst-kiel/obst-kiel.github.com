@@ -3,12 +3,13 @@
 <head>
   <title>Objektstammtisch Kiel</title>
   <meta charset="utf-8">
+  <link rel="icon" href="public/favicon.ico" type="image/vnd.microsoft.icon">
   <style type="text/css" media="screen">
     @font-face {
       font-family: "League Gothic";
       font-weight: normal;
       src: url(public/League_Gothic.eot);
-      src: url(public/League_Gothic.otf) format('opentype');
+      src: local("League Gothic"), url(public/League_Gothic.otf) format('opentype'); /* use local() to stop IE from trying to understand this */
     }
     body {
       font-family: "League Gothic", "Arial Narrow", sans-serif;
@@ -112,10 +113,10 @@
     #popup {
       background: #FFFFFF;
       position: absolute;
-      top: 160px;
+      top: 120px;
       left: 160px;
       width: 560px;
-      height: 250px;
+      height: 390px;
       margin: 0 auto;
       padding: 20px 40px;
       border: 4px solid #CDCDCD;
@@ -131,6 +132,10 @@
       font-size: 16px;
       line-height: 22px;
       margin: 20px 0;
+    }
+    #popup a {
+      color: #333;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -168,16 +173,22 @@
   </div>
 
   <div id="popup">
-    <p>Der Kieler Objekt-Stammtisch (kurz OBST, ehemals "Stammtisch
-    objektorientierte Methoden") trifft sich seit 1999 regelmäßig am
-    zweiten Dienstag im Monat zum Klönschnack und Informationsaustausch.</p>
+    <p>Wir treffen uns seit 1999 an jedem zweiten Dienstag im Monat zu 
+      Vorträgen und Klönschnack beim Objekt-Stammtisch Kiel (kurz ObSt, 
+      ehemals "Stammtisch objektorientierte Methoden").</p>
+      
+    <p>Unsere Themen betreffen oft Bereiche der Software-Entwicklung, 
+      Informationstechnologie und der kulturellen Aspekte des Technikeinsatzes. 
+      Wir freuen uns über gelegentliche Gastvorträge aus anderen, meist
+      wissenschaftlichen, Bereichen.</p>
+    
+    <p>Teilnehmer des Stammtisches organisieren gelegentlich Workshops zu 
+      Programmierung und Software-Entwicklung. Seit Januar 2009 sind zwei bis 
+      drei Vorträge fester Bestandteil jedes Stammtisches. Einer dieser Vorträge 
+      ist für Einsteigerthemen reserviert.</p>
 
-    <p>In erster Linie werden interessante Themen rund um verschiedene
-    Paradigmen der Programmierung in Vorträgen vermittelt und anschließend
-    sachverständig diskutiert. Die Vortragsinhalte haben sich seit
-    Gründung stetig intensiviert und werden nun durch Einsteigerthemen
-    ergänzt. Neben der Software-Entwicklung und Technik im Allgemeinen
-    reden wir auch gerne über kulturelle Aspekte des Technikeinsatzes.</p>
+    <p>Ort und Uhrzeit der Treffen wechseln. Die beste Quelle für Informationen 
+      und Nachfragen ist unsere <a href="http://groups.google.com/group/obst-kiel/">Mailingliste</a>.</p>
   </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
@@ -189,6 +200,10 @@ $(function(){
     })
   });
   $('#links a:last').attr("href", "mailto:info@o#bs#t-k#ie#l#.d#e".replace(/#/g, ""));
+  if(new Date() > new Date(2010, 8, 15)){
+    $("a.date").text("12.10.2010, 19:00");
+    $("a.location").attr("href", "http://maps.google.de/maps?f=q&source=s_q&hl=de&geocode=&q=Ha%C3%9Fstra%C3%9Fe+22,+Kiel&sll=54.322684,10.13586&sspn=0.239879,0.790329&ie=UTF8&hq=&hnear=Ha%C3%9Fstra%C3%9Fe+22,+Kiel+24103+Kiel,+Schleswig-Holstein&z=16").text("Pumpe");
+  }
 });
 </script>
 </body>
